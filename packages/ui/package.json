@@ -4,11 +4,12 @@
   "sideEffects": false,
   "license": "MIT",
   "exports": {
-    "./button": {
-      "types": "./src/button.tsx",
-      "import": "./dist/button.mjs",
-      "require": "./dist/button.js"
-    }
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/index.css"
   },
   "scripts": {
     "build": "tsup",
@@ -18,10 +19,12 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "@vanilla-extract/esbuild-plugin": "^2.3.7",
+    "@vanilla-extract/css": "^1.15.3",
     "eslint": "^8.57.0",
-    "@repo/typescript-config": "workspace:*",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3"
   },

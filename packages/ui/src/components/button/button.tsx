@@ -1,3 +1,5 @@
+import * as styles from "./button.css";
+
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
@@ -5,7 +7,7 @@ export interface ButtonProps
 
 export function Button({ children, ...other }: ButtonProps): JSX.Element {
   return (
-    <button type="button" {...other}>
+    <button className={styles.root} type="button" {...other}>
       {children}
     </button>
   );
