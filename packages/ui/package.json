@@ -9,7 +9,8 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
-    "./styles.css": "./dist/index.css"
+    "./styles.css": "./dist/index.css",
+    "./fonts.css": "./dist/base.css"
   },
   "scripts": {
     "build": "tsup",

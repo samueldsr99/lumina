@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Söhne';
+  src: url("./assets/fonts/Test\ Söhne/TestSöhne-Buch.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url("./assets/fonts/Test\ Söhne/TestSöhne-BuchKursiv.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url("./assets/fonts/Test\ Söhne/TestSöhne-Halbfett.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url("./assets/fonts/Test\ Söhne/TestSöhne-HalbfettKursiv.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url("./assets/fonts/Test\ Söhne/TestSöhne-Dreiviertelfett.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url("./assets/fonts/Test\ Söhne/TestSöhne-DreiviertelfettKursiv.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url("./assets/fonts/Test\ Söhne/TestSöhne-Fett.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url("./assets/fonts/Test\ Söhne/TestSöhne-FettKursiv.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}

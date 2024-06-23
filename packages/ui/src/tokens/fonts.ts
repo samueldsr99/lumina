@@ -1,7 +1,7 @@
 export const fontTokens = {
   family: {
-    sans: "Söhne",
-    mono: "Söhne Mono",
+    sans: '"Söhne", sanf-serif',
+    mono: '"Söhne Mono", monospace',
   },
   weight: {
     normal: 400,

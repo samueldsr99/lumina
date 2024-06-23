@@ -2,7 +2,7 @@ import { defineConfig } from "tsup";
 import { vanillaExtractPlugin } from "@vanilla-extract/esbuild-plugin";
 
 export default defineConfig((options) => ({
-  entryPoints: ["src/index.ts"],
+  entryPoints: ["src/index.ts", "src/base.css"],
   esbuildPlugins: [vanillaExtractPlugin()],
   format: ["esm"],
   dts: true,
