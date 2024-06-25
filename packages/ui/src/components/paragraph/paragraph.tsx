@@ -19,7 +19,10 @@ export function Paragraph({
   return (
     <Text
       as="p"
-      className={clsx(styles.size[size], margin && styles.withMargin)}
+      className={clsx(
+        styles.size[size],
+        styles.withMargin[margin ? "true" : "false"]
+      )}
     >
       {children}
     </Text>

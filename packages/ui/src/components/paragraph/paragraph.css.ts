@@ -1,4 +1,4 @@
-import { style, styleVariants } from "@vanilla-extract/css";
+import { styleVariants } from "@vanilla-extract/css";
 import { tokens } from "../../tokens";
 import { toPx } from "../../tokens/utils";
 
@@ -30,6 +30,11 @@ export const size = styleVariants({
   },
 });
 
-export const withMargin = style({
-  marginBottom: toPx(tokens.size["size-70"]),
+export const withMargin = styleVariants({
+  true: {
+    marginBottom: tokens.spacing["space-4"],
+  },
+  false: {
+    margin: 0,
+  },
 });
