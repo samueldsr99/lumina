@@ -58,4 +58,9 @@ export const colorTokens = {
     950: "#101014",
     1000: openAIColors.black,
   },
+  gold: {
+    100: "#ffe8c4",
+    500: "#f4ac36",
+    700: "#945e0c",
+  },
 } as const;
