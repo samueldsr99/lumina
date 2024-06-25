@@ -1,16 +1,16 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
-import { theme } from "@acme/ui/theme";
+import { ThemeDecorator } from "../components/decorators";
 
-// import "@acme/ui/styles.css";
-// import "@acme/ui/fonts.css";
+import "@acme/ui/styles.css";
+import "@acme/ui/fonts.css";
 
 const preview: Preview = {
   decorators: [
     (Story) => (
-      <div className={theme.light.themeClass}>
+      <ThemeDecorator>
         <Story />
-      </div>
+      </ThemeDecorator>
     ),
   ],
 };
