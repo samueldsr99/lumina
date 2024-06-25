@@ -1,15 +1,21 @@
-export const palette = {
-  white: "#fff",
+const openAIColors = {
+  black: "#000000",
+  white: "#ffffff",
+  green: "#10A37F",
+};
+
+export const colorTokens = {
+  openAI: openAIColors,
   green: {
     50: "#ebfaeb",
-    "50a": "rgb(16, 163, 127, 0.2)",
+    "50a": "#10A37F33",
     100: "#d2f4d3",
-    "100a": "rgb(16, 163, 127, 0.3)",
+    "100a": "#10A37F4D",
     200: "#b9eebc",
     300: "#93e69c",
     400: "#68de7a",
     500: "#19c37d",
-    600: "#10a37f",
+    600: openAIColors.green,
     700: "#1a7f64",
     800: "#1b5d4a",
     900: "#183d31",
@@ -28,6 +34,7 @@ export const palette = {
     900: "#59181a",
   },
   gray: {
+    0: openAIColors.white,
     25: "#fcfcfd",
     50: "#f7f7f8",
     75: "#f2f2f5",
@@ -49,6 +56,6 @@ export const palette = {
     850: "#282832",
     900: "#202123",
     950: "#101014",
-    1000: "#000000",
+    1000: openAIColors.black,
   },
 } as const;
