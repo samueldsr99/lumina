@@ -6,6 +6,12 @@ const meta: Meta<typeof Heading> = {
   component: Heading,
   args: {
     children: "Lorem ipsum dolor sit amet",
+    margin: true,
+  },
+  argTypes: {
+    margin: {
+      control: { type: "boolean" },
+    },
   },
 };
 

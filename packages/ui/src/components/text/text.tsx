@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { clsx } from "../../utils/clsx";
 import * as styles from "./text.css";
 
 export type TextAs =
@@ -12,16 +13,15 @@ export type TextAs =
   | "a"
   | "span";
 
-export type TextVariant = "h1" | "h2" | "h3" | "h4";
-
 export interface TextProps {
   as: TextAs;
-  variant: TextVariant;
   children?: ReactNode;
+  margin?: boolean;
+  className?: string;
 }
 
 export function Text(props: TextProps): JSX.Element {
-  const { as: Tag, variant, ...restProps } = props;
+  const { as: Tag, className, ...restProps } = props;
 
-  return <Tag className={styles[variant]} {...restProps} />;
+  return <Tag className={clsx(styles.root, className)} {...restProps} />;
 }
