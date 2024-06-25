@@ -1,4 +1,4 @@
-import { style } from "@vanilla-extract/css";
+import { style, styleVariants } from "@vanilla-extract/css";
 import { lightTheme } from "../../theme/light.css";
 import { toPx } from "../../tokens/utils";
 import { tokens } from "../../tokens";
@@ -31,6 +31,11 @@ export const h4 = style({
   color: lightTheme.vars.text.heading,
 });
 
-export const withMargin = style({
-  marginBottom: tokens.spacing["space-70"],
+export const withMargin = styleVariants({
+  true: {
+    marginBottom: tokens.spacing["space-70"],
+  },
+  false: {
+    margin: 0,
+  },
 });
