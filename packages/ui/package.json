@@ -14,8 +14,7 @@
       "import": "./dist/theme/index.mjs",
       "require": "./dist/theme/index.js"
     },
-    "./styles.css": "./dist/index.css",
-    "./fonts.css": "./dist/fonts.css"
+    "./styles.css": "./dist/index.css"
   },
   "scripts": {
     "build": "tsup",
