@@ -7,12 +7,12 @@
     ".": {
       "types": "./src/index.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.js"
     },
     "./theme": {
       "types": "./src/theme/index.ts",
       "import": "./dist/theme/index.mjs",
-      "require": "./dist/theme/index.cjs"
+      "require": "./dist/theme/index.js"
     },
     "./styles.css": "./dist/index.css",
     "./fonts.css": "./dist/fonts.css"
