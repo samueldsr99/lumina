@@ -26,7 +26,7 @@ export const root = style({
 
 export const primary = style({
   backgroundColor: lightTheme.vars.button.primary.default,
-  color: lightTheme.vars.button.primary.contrastText,
+  color: lightTheme.vars.button.primary["contrast-text"],
   ":hover": {
     backgroundColor: lightTheme.vars.button.primary.hover,
   },
@@ -40,7 +40,7 @@ export const primary = style({
 
 export const secondary = style({
   backgroundColor: lightTheme.vars.button.secondary.default,
-  color: lightTheme.vars.button.secondary.contrastText,
+  color: lightTheme.vars.button.secondary["contrast-text"],
   ":hover": {
     backgroundColor: lightTheme.vars.button.secondary.hover,
   },
@@ -54,7 +54,7 @@ export const secondary = style({
 
 export const destructive = style({
   backgroundColor: lightTheme.vars.button.destructive.default,
-  color: lightTheme.vars.button.destructive.contrastText,
+  color: lightTheme.vars.button.destructive["contrast-text"],
   ":hover": {
     backgroundColor: lightTheme.vars.button.destructive.hover,
   },
@@ -68,6 +68,6 @@ export const destructive = style({
 
 export const disabled = style({
   backgroundColor: lightTheme.vars.button.disabled.default,
-  color: lightTheme.vars.button.disabled.contrastText,
+  color: lightTheme.vars.button.disabled["contrast-text"],
   cursor: "not-allowed",
 });

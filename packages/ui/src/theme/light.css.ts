@@ -13,26 +13,29 @@ const [themeClass, vars] = createTheme({
     },
     disabled: {
       default: tokens.color.gray[75],
-      contrastText: tokens.color.gray[300],
+      "contrast-text": tokens.color.gray[300],
     },
     primary: {
       default: tokens.color.openAI.green,
       hover: tokens.color.green[700],
-      contrastText: tokens.color.openAI.white,
+      "contrast-text": tokens.color.openAI.white,
       "focus-shadow": tokens.color.green[100],
     },
     secondary: {
       default: tokens.color.gray[100],
       hover: tokens.color.gray[200],
-      contrastText: tokens.color.gray[800],
+      "contrast-text": tokens.color.gray[800],
       "focus-shadow": tokens.color.gray[50],
     },
     destructive: {
       default: tokens.color.red[500],
       hover: tokens.color.red[700],
-      contrastText: tokens.color.gray[50],
+      "contrast-text": tokens.color.gray[50],
       "focus-shadow": tokens.color.red[50],
     },
+  },
+  text: {
+    heading: tokens.color.gray[950],
   },
 });
 
