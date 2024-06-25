@@ -9,8 +9,13 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
+    "./theme": {
+      "types": "./src/theme/index.ts",
+      "import": "./dist/theme/index.mjs",
+      "require": "./dist/theme/index.cjs"
+    },
     "./styles.css": "./dist/index.css",
-    "./fonts.css": "./dist/base.css"
+    "./fonts.css": "./dist/fonts.css"
   },
   "scripts": {
     "build": "tsup",

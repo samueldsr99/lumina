@@ -1,1 +1,1 @@
-export { TextInput } from "./text-input";
+export { Box as TextInput } from "./text-input";

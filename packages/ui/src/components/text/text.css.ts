@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { fontTokens } from "../../tokens/fonts";
+import { fontTokens } from "../../tokens/font";
 
 // NOTE: Define tokens for all values
 

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Heading } from "@acme/ui";
 
 const meta: Meta<typeof Heading> = {
-  title: "Primitives/Heading",
+  title: "Text/Heading",
   component: Heading,
   args: {
     children: "Lorem ipsum dolor sit amet",

@@ -33,7 +33,6 @@ const config: StorybookConfig = {
           },
         ],
       },
-      // load css
     };
   },
 

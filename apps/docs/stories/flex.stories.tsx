@@ -3,7 +3,7 @@ import { TextInput } from "@acme/ui";
 
 const meta: Meta<typeof TextInput> = {
   component: TextInput,
-  title: "Components/Text Input",
+  title: "Layout/Flex",
   argTypes: {
     type: {},
   },
@@ -13,7 +13,7 @@ export default meta;
 
 type Story = StoryObj<typeof TextInput>;
 
-export const Primary: Story = {
-  render: (props) => <TextInput {...props} />,
-  name: "Text Input",
+export const Default: Story = {
+  render: (props) => <></>,
+  name: "Flex",
 };

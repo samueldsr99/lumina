@@ -5,8 +5,8 @@ export interface TextInputProps
   sz: "small" | "medium" | "large";
 }
 
-export function TextInput(props: TextInputProps): JSX.Element {
+export function Box(props: TextInputProps): JSX.Element {
   return <input className={styles.root} type="text" {...props} />;
 }
 
-TextInput.displayName = "TextInput";
+Box.displayName = "TextInput";
