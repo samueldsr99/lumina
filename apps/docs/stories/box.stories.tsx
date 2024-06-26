@@ -12,6 +12,14 @@ export default meta;
 type Story = StoryObj<typeof Box>;
 
 export const Default: Story = {
-  render: (props) => <Box {...props} />,
-  name: "Box",
+  render: (props) => (
+    <Box
+      sx={{
+        size: "size-200",
+        borderRadius: 40,
+        backgroundColor: "button-primary-default",
+      }}
+      {...props}
+    />
+  ),
 };

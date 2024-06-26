@@ -51,7 +51,7 @@ function Item(): JSX.Element {
     <Box
       sx={{
         size: "size-200",
-        backgroundColor: "gray-200",
+        backgroundColor: "button-primary-default",
         borderRadius: 40,
       }}
     />

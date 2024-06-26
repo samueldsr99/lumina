@@ -25,30 +25,24 @@ export default meta;
 
 type Story = StoryObj<typeof Stack>;
 
+function Item(): JSX.Element {
+  return (
+    <Box
+      sx={{
+        size: "size-200",
+        backgroundColor: "button-primary-default",
+        borderRadius: 40,
+      }}
+    />
+  );
+}
+
 export const Default: Story = {
   render: (props) => (
     <Stack {...props}>
-      <Box
-        sx={{
-          size: "size-200",
-          backgroundColor: "gray-200",
-          borderRadius: 40,
-        }}
-      />
-      <Box
-        sx={{
-          size: "size-200",
-          backgroundColor: "gray-200",
-          borderRadius: 40,
-        }}
-      />
-      <Box
-        sx={{
-          size: "size-200",
-          backgroundColor: "gray-200",
-          borderRadius: 40,
-        }}
-      />
+      <Item />
+      <Item />
+      <Item />
     </Stack>
   ),
   name: "Stack",
