@@ -39,11 +39,6 @@ const flexProperties = {
   flexGrow: [0, 1],
 } as const;
 
-const borderProperties = {
-  border: borderTokens.style,
-  borderRadius: borderTokens.radius,
-} as const;
-
 const spacingProperties = {
   gap: spacingTokens,
   rowGap: spacingTokens,
@@ -61,8 +56,8 @@ const spacingProperties = {
 } as const;
 
 const sizeProperties = {
-  width: sizeTokens,
-  height: sizeTokens,
+  width: { ...sizeTokens, "100%": "100%" },
+  height: { ...sizeTokens, "100%": "100%" },
 } as const;
 
 const semanticColors = lightTheme.vars.color;
@@ -72,12 +67,20 @@ const colorProperties = {
   color: semanticColors,
 } as const;
 
+const borderProperties = {
+  border: borderTokens.style,
+  borderRadius: borderTokens.radius,
+  borderColor: semanticColors,
+} as const;
+
 const fontProperties = {
   fontFamily: [fontTokens.family.sans],
   fontWeight: fontTokens.weight,
   fontSize: fontTokens.size,
   lineHeight: fontTokens.lineHeight,
 };
+
+const positionTokens = { ...spacingTokens, "50%": "50%" };
 
 const allProperties = defineProperties({
   conditions: {
@@ -97,17 +100,22 @@ const allProperties = defineProperties({
     marker: {
       selector: "&::marker",
     },
+    placeholder: {
+      selector: "&::placeholder",
+    },
   },
   defaultCondition: "default",
 
   properties: {
     content: [""],
+    boxSizing: ["border-box"],
 
     position: ["relative", "absolute", "fixed", "sticky"],
-    left: spacingTokens,
-    right: spacingTokens,
-    top: spacingTokens,
-    bottom: spacingTokens,
+    left: positionTokens,
+    right: positionTokens,
+    top: positionTokens,
+    bottom: positionTokens,
+    zIndex: ["auto", 10, 20, 30, 40, 50],
 
     backgroundRepeat: ["no-repeat", "repeat", "repeat-x", "repeat-y"],
     backgroundImage: ["none"],
@@ -115,6 +123,7 @@ const allProperties = defineProperties({
     cursor: ["pointer", "not-allowed"],
 
     transition: ["box-shadow .2s, background-color .2s, color .2s, border .2s"],
+    transform: ["translateY(-50%)"],
     boxShadow: {
       "button-primary-focus-shadow": `${lightTheme.vars.color["button-primary-focus-shadow"]} 0 0 0 3px`,
       "button-secondary-focus-shadow": `${lightTheme.vars.color["button-secondary-focus-shadow"]} 0 0 0 3px`,
@@ -122,6 +131,9 @@ const allProperties = defineProperties({
       "button-primary-focus-visible-shadow": `0px 0px 0px 2px ${tokens.color["openai-white"]},0px 0px 0px 4px ${lightTheme.vars.color["button-primary-default"]}`,
       "button-secondary-focus-visible-shadow": `0px 0px 0px 2px ${tokens.color["openai-white"]},0px 0px 0px 4px ${lightTheme.vars.color["button-secondary-default"]}`,
       "button-destructive-focus-visible-shadow": `0px 0px 0px 2px ${tokens.color["openai-white"]},0px 0px 0px 4px ${lightTheme.vars.color["button-destructive-default"]}`,
+
+      "textfield-default-focus-shadow": `0 0 0 1px ${lightTheme.vars.color["border-active"]}`,
+      "textfield-error-focus-shadow": `0 0 0 1px ${lightTheme.vars.color["border-error"]}`,
     },
     outline: ["none"],
 
@@ -133,6 +145,8 @@ const allProperties = defineProperties({
     ...colorProperties,
   },
   shorthands: {
+    insetY: ["top", "bottom"],
+    insetX: ["left", "right"],
     paddingX: ["paddingLeft", "paddingRight"],
     paddingY: ["paddingTop", "paddingBottom"],
     marginX: ["marginLeft", "marginRight"],

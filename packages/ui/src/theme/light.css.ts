@@ -3,6 +3,12 @@ import { tokens } from "../tokens";
 
 const [themeClass, vars] = createTheme({
   color: {
+    "border-default": tokens.color["gray-200"],
+    "border-active": tokens.color["openai-green"],
+    "border-error": tokens.color["red-500"],
+    "border-gold": tokens.color["gold-700"],
+    "border-dark": tokens.color["gray-800"],
+
     "button-disabled-default": tokens.color["gray-75"],
     "button-disabled-contrast-text": tokens.color["gray-300"],
 
@@ -38,6 +44,12 @@ const [themeClass, vars] = createTheme({
     "text-help": tokens.color["gray-600"],
     "text-error": tokens.color["red-500"],
     "text-label": tokens.color["gray-800"],
+
+    "textfield-default": tokens.color["gray-0"],
+    "textfield-placeholder-text": tokens.color["gray-500"],
+    "textfield-contrast-text": tokens.color["gray-800"],
+    "textfield-error-default": tokens.color["red-50"],
+    "text-disabled-default": tokens.color["gray-75"],
   },
   border: {
     "radius-small": tokens.border.radius[30],

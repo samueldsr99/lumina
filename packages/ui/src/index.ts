@@ -3,7 +3,7 @@ export * from "./components/stack";
 export * from "./components/flex";
 export * from "./components/box";
 export * from "./components/button";
-export * from "./components/text-input";
+export * from "./components/text-field";
 export * from "./components/text";
 export * from "./components/error-text";
 export * from "./components/help-text";
