@@ -91,10 +91,27 @@ const allProperties = defineProperties({
     focusVisible: {
       selector: "&:focus-visible",
     },
+    before: {
+      selector: "&::before",
+    },
+    marker: {
+      selector: "&::marker",
+    },
   },
   defaultCondition: "default",
 
   properties: {
+    content: [""],
+
+    position: ["relative", "absolute", "fixed", "sticky"],
+    left: spacingTokens,
+    right: spacingTokens,
+    top: spacingTokens,
+    bottom: spacingTokens,
+
+    backgroundRepeat: ["no-repeat", "repeat", "repeat-x", "repeat-y"],
+    backgroundImage: ["none"],
+
     cursor: ["pointer", "not-allowed"],
 
     transition: ["box-shadow .2s, background-color .2s, color .2s, border .2s"],
