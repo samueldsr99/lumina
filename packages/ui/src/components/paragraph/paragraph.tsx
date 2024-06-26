@@ -9,19 +9,22 @@ export interface ParagraphProps {
   children?: ReactNode;
   size?: ParagraphSize;
   margin?: boolean;
+  strong?: boolean;
 }
 
 export function Paragraph({
   children,
   size = "regular",
   margin = true,
+  strong = false,
 }: ParagraphProps): JSX.Element {
   return (
     <Text
       as="p"
       className={clsx(
         styles.size[size],
-        styles.withMargin[margin ? "true" : "false"]
+        styles.margin[margin ? "true" : "false"],
+        styles.strong[strong ? "true" : "false"]
       )}
     >
       {children}
