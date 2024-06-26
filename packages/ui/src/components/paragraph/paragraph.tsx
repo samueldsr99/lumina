@@ -22,6 +22,7 @@ export function Paragraph({
     <Text
       as="p"
       className={clsx(
+        styles.root,
         styles.size[size],
         styles.margin[margin ? "true" : "false"],
         styles.strong[strong ? "true" : "false"]

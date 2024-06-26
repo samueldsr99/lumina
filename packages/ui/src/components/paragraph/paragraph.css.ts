@@ -1,5 +1,9 @@
 import { sprinkles } from "../../css/sprinkles.css";
 
+export const root = sprinkles({
+  color: "text-paragraph",
+});
+
 export const size = {
   xsmall: sprinkles({
     fontSize: 20,

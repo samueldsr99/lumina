@@ -39,5 +39,6 @@ export const fontTokens = {
     110: toPx(sizeTokens["size-110"]),
     120: toPx(sizeTokens["size-120"]),
     130: toPx(sizeTokens["size-130"]),
+    140: toPx(sizeTokens["size-140"]),
   },
 } as const;

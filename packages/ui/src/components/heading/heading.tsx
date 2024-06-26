@@ -20,6 +20,7 @@ export function Heading({
     <Text
       as={variant}
       className={clsx(
+        styles.root,
         styles[variant],
         styles.withMargin[margin ? "true" : "false"]
       )}

@@ -32,15 +32,17 @@ const [themeClass, vars] = createTheme({
 
     "badge-danger-default": tokens.color["red-100"],
     "badge-danger-contrast-text": tokens.color["red-700"],
+
+    "text-heading": tokens.color["gray-950"],
+    "text-paragraph": tokens.color["gray-950"],
+    "text-help": tokens.color["gray-600"],
+    "text-error": tokens.color["red-500"],
+    "text-label": tokens.color["gray-800"],
   },
   border: {
     "radius-small": tokens.border.radius[30],
     "radius-large": tokens.border.radius[40],
     "radius-full": tokens.border.radius.full,
-  },
-
-  text: {
-    heading: tokens.color["gray-950"],
   },
 });
 

@@ -11,7 +11,8 @@ export type TextAs =
   | "h6"
   | "p"
   | "a"
-  | "span";
+  | "span"
+  | "label";
 
 export interface TextProps {
   as: TextAs;

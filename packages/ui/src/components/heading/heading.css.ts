@@ -1,34 +1,30 @@
-import { style, styleVariants } from "@vanilla-extract/css";
-import { lightTheme } from "../../theme/light.css";
-import { toPx } from "../../tokens/utils";
+import { styleVariants } from "@vanilla-extract/css";
 import { tokens } from "../../tokens";
+import { sprinkles } from "../../css/sprinkles.css";
 
-export const h1 = style({
-  fontSize: tokens.font.size[110],
-  lineHeight: toPx(tokens.size["size-140"]),
-  fontWeight: tokens.font.weight.bold,
-  color: lightTheme.vars.text.heading,
+export const root = sprinkles({
+  color: "text-heading",
+  fontWeight: "bold",
 });
 
-export const h2 = style({
-  fontSize: tokens.font.size[70],
-  lineHeight: toPx(tokens.size["size-110"]),
-  fontWeight: tokens.font.weight.bold,
-  color: lightTheme.vars.text.heading,
+export const h1 = sprinkles({
+  fontSize: 110,
+  lineHeight: 140,
 });
 
-export const h3 = style({
-  fontSize: tokens.font.size[60],
-  lineHeight: toPx(tokens.size["size-90"]),
-  fontWeight: tokens.font.weight.bold,
-  color: lightTheme.vars.text.heading,
+export const h2 = sprinkles({
+  fontSize: 70,
+  lineHeight: 110,
 });
 
-export const h4 = style({
-  fontSize: tokens.font.size[50],
-  lineHeight: toPx(tokens.size["size-70"]),
-  fontWeight: tokens.font.weight.bold,
-  color: lightTheme.vars.text.heading,
+export const h3 = sprinkles({
+  fontSize: 60,
+  lineHeight: 90,
+});
+
+export const h4 = sprinkles({
+  fontSize: 50,
+  lineHeight: 70,
 });
 
 export const withMargin = styleVariants({
