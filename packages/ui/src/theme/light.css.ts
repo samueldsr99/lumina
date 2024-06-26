@@ -2,42 +2,49 @@ import { createTheme } from "@vanilla-extract/css";
 import { tokens } from "../tokens";
 
 const [themeClass, vars] = createTheme({
-  button: {
-    "focus-ring": {
-      primary: `0px 0px 0px 2px ${tokens.color.openAI.white},0px 0px 0px 4px ${tokens.color.openAI.green}`,
-    },
-    border: {
-      radius: tokens.border.radius.full,
-      "radius-small": tokens.border.radius[30],
-      "radius-large": tokens.border.radius[40],
-    },
-    disabled: {
-      default: tokens.color.gray[75],
-      "contrast-text": tokens.color.gray[300],
-    },
-    primary: {
-      default: tokens.color.openAI.green,
-      hover: tokens.color.green[700],
-      "contrast-text": tokens.color.openAI.white,
-      "focus-shadow": tokens.color.green[100],
-    },
-    secondary: {
-      default: tokens.color.gray[100],
-      hover: tokens.color.gray[200],
-      "contrast-text": tokens.color.gray[800],
-      "focus-shadow": tokens.color.gray[50],
-    },
-    destructive: {
-      default: tokens.color.red[500],
-      hover: tokens.color.red[700],
-      "contrast-text": tokens.color.gray[50],
-      "focus-shadow": tokens.color.red[50],
-    },
+  color: {
+    "button-disabled-default": tokens.color["gray-75"],
+    "button-disabled-contrast-text": tokens.color["gray-300"],
+
+    "button-primary-default": tokens.color["openai-green"],
+    "button-primary-hover": tokens.color["green-700"],
+    "button-primary-contrast-text": tokens.color["openai-white"],
+    "button-primary-focus-shadow": tokens.color["green-100"],
+
+    "button-secondary-default": tokens.color["gray-100"],
+    "button-secondary-hover": tokens.color["gray-200"],
+    "button-secondary-contrast-text": tokens.color["gray-800"],
+    "button-secondary-focus-shadow": tokens.color["gray-50"],
+
+    "button-destructive-default": tokens.color["red-500"],
+    "button-destructive-hover": tokens.color["red-700"],
+    "button-destructive-contrast-text": tokens.color["gray-50"],
+    "button-destructive-focus-shadow": tokens.color["red-50"],
+
+    "badge-gray-default": tokens.color["gray-100"],
+    "badge-gray-contrast-text": tokens.color["gray-700"],
+
+    "badge-success-default": tokens.color["green-100"],
+    "badge-success-contrast-text": tokens.color["green-800"],
+
+    "badge-warning-default": tokens.color["gold-100"],
+    "badge-warning-contrast-text": tokens.color["gold-700"],
+
+    "badge-danger-default": tokens.color["red-100"],
+    "badge-danger-contrast-text": tokens.color["red-700"],
   },
+  border: {
+    "radius-small": tokens.border.radius[30],
+    "radius-large": tokens.border.radius[40],
+    "radius-full": tokens.border.radius.full,
+  },
+
   text: {
-    heading: tokens.color.gray[950],
+    heading: tokens.color["gray-950"],
   },
 });
+
+export type Colors = keyof typeof vars.color;
 
 export const lightTheme = {
   themeClass,

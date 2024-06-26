@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 import { clsx } from "../../utils/clsx";
 import { Box } from "../box";
-import { size as paragraphSize } from "../paragraph/paragraph.css";
+import * as paragraphStyles from "../paragraph/paragraph.css";
 import * as styles from "./badge.css";
 
-export type BadgeVariant = "success" | "warning" | "error";
+export type BadgeVariant = "gray" | "success" | "warning" | "danger";
 
 export interface BadgeProps {
   variant?: BadgeVariant;
@@ -16,8 +16,9 @@ export function Badge({ variant = "success", children }: BadgeProps) {
     <Box
       as="span"
       className={clsx(
-        paragraphSize.xsmall,
         styles.root,
+        paragraphStyles.size.xsmall,
+        paragraphStyles.strong.true,
         styles.variant[variant]
       )}
     >

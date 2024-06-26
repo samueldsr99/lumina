@@ -8,8 +8,9 @@ import { vanillaExtractPlugin } from "@vanilla-extract/esbuild-plugin";
 type Plugin = NonNullable<Options["esbuildPlugins"]>[number];
 
 export default defineConfig((options) => ({
-  entryPoints: ["src/index.ts", "src/theme/index.ts"],
+  entryPoints: ["src/index.ts", "src/theme/index.ts", "src/tokens/index.ts"],
   esbuildPlugins: [vanillaExtractPlugin() as Plugin],
+  minify: true,
   format: ["cjs", "esm"],
   dts: true,
   sourcemap: true,

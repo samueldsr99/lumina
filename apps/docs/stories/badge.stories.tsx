@@ -7,7 +7,7 @@ const meta: Meta<typeof Badge> = {
   argTypes: {
     variant: {
       control: { type: "radio" },
-      options: ["success", "warning", "error"],
+      options: ["gray", "success", "warning", "danger"],
     },
   },
 };
@@ -15,6 +15,14 @@ const meta: Meta<typeof Badge> = {
 export default meta;
 
 type Story = StoryObj<typeof Badge>;
+
+export const Gray: Story = {
+  render: (props) => <Badge {...props} />,
+  args: {
+    children: "Gray",
+    variant: "gray",
+  },
+};
 
 export const Success: Story = {
   render: (props) => <Badge {...props} />,
@@ -32,10 +40,10 @@ export const Warning: Story = {
   },
 };
 
-export const Error: Story = {
+export const Danger: Story = {
   render: (props) => <Badge {...props} />,
   args: {
-    children: "Error",
-    variant: "error",
+    children: "Danger",
+    variant: "danger",
   },
 };

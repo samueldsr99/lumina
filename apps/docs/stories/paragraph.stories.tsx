@@ -7,9 +7,13 @@ const meta: Meta<typeof Paragraph> = {
   args: {
     children: "Lorem ipsum dolor sit amet",
     margin: true,
+    strong: false,
   },
   argTypes: {
     margin: {
+      control: { type: "boolean" },
+    },
+    strong: {
       control: { type: "boolean" },
     },
   },

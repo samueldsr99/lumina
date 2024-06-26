@@ -1,73 +1,66 @@
-import { style } from "@vanilla-extract/css";
-import { lightTheme } from "../../theme/light.css";
 import { tokens } from "../../tokens";
+import { sprinkles } from "../../css/sprinkles.css";
 
-export const root = style({
-  padding: `${tokens.spacing["space-8"]} ${tokens.spacing["space-30"]}`,
-  borderRadius: tokens.spacing["space-8"],
+export const root = sprinkles({
+  paddingY: "space-8",
+  paddingX: "space-30",
+  borderRadius: 40,
   border: "none",
   cursor: "pointer",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  gap: tokens.spacing["space-4"],
-
+  gap: "space-4",
   fontFamily: tokens.font.family.sans,
 
-  fontWeight: tokens.font.weight.medium,
-  fontSize: tokens.font.size[30],
-  lineHeight: tokens.font.lineHeight[60],
+  fontWeight: "medium",
+  fontSize: 30,
+  lineHeight: 60,
 
   transition: "box-shadow .2s, background-color .2s, color .2s, border .2s",
-  ":focus": {
-    outline: "none",
+  outline: {
+    focus: "none",
   },
 });
 
-export const primary = style({
-  backgroundColor: lightTheme.vars.button.primary.default,
-  color: lightTheme.vars.button.primary["contrast-text"],
-  ":hover": {
-    backgroundColor: lightTheme.vars.button.primary.hover,
+export const primary = sprinkles({
+  backgroundColor: {
+    default: "button-primary-default",
+    hover: "button-primary-hover",
   },
-  ":focus": {
-    boxShadow: `${lightTheme.vars.button.primary["focus-shadow"]} 0 0 0 3px`,
-  },
-  ":focus-visible": {
-    boxShadow: `0px 0px 0px 2px ${tokens.color.openAI.white},0px 0px 0px 4px ${lightTheme.vars.button.primary.default}`,
+  color: "button-primary-contrast-text",
+  boxShadow: {
+    focus: "button-primary-focus-shadow",
+    focusVisible: "button-primary-focus-visible-shadow",
   },
 });
 
-export const secondary = style({
-  backgroundColor: lightTheme.vars.button.secondary.default,
-  color: lightTheme.vars.button.secondary["contrast-text"],
-  ":hover": {
-    backgroundColor: lightTheme.vars.button.secondary.hover,
+export const secondary = sprinkles({
+  backgroundColor: {
+    default: "button-secondary-default",
+    hover: "button-secondary-hover",
   },
-  ":focus": {
-    boxShadow: `${lightTheme.vars.button.secondary["focus-shadow"]} 0 0 0 3px`,
-  },
-  ":focus-visible": {
-    boxShadow: `0px 0px 0px 2px ${tokens.color.openAI.white},0px 0px 0px 4px ${lightTheme.vars.button.secondary.default}`,
+  color: "button-secondary-contrast-text",
+  boxShadow: {
+    focus: "button-secondary-focus-shadow",
+    focusVisible: "button-secondary-focus-visible-shadow",
   },
 });
 
-export const destructive = style({
-  backgroundColor: lightTheme.vars.button.destructive.default,
-  color: lightTheme.vars.button.destructive["contrast-text"],
-  ":hover": {
-    backgroundColor: lightTheme.vars.button.destructive.hover,
+export const destructive = sprinkles({
+  backgroundColor: {
+    default: "button-destructive-default",
+    hover: "button-destructive-hover",
   },
-  ":focus": {
-    boxShadow: `${lightTheme.vars.button.destructive["focus-shadow"]} 0 0 0 3px`,
-  },
-  ":focus-visible": {
-    boxShadow: `0px 0px 0px 2px ${tokens.color.openAI.white},0px 0px 0px 4px ${lightTheme.vars.button.destructive.default}`,
+  color: "button-destructive-contrast-text",
+  boxShadow: {
+    focus: "button-destructive-focus-shadow",
+    focusVisible: "button-destructive-focus-visible-shadow",
   },
 });
 
-export const disabled = style({
-  backgroundColor: lightTheme.vars.button.disabled.default,
-  color: lightTheme.vars.button.disabled["contrast-text"],
+export const disabled = sprinkles({
+  backgroundColor: "button-disabled-default",
+  color: "button-disabled-contrast-text",
   cursor: "not-allowed",
 });

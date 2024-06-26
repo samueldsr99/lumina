@@ -131,6 +131,12 @@ importers:
       '@vanilla-extract/esbuild-plugin':
         specifier: ^2.3.7
         version: 2.3.7(esbuild@0.19.12)
+      '@vanilla-extract/recipes':
+        specifier: ^0.5.3
+        version: 0.5.3(@vanilla-extract/css@1.15.3)
+      '@vanilla-extract/sprinkles':
+        specifier: ^1.6.2
+        version: 1.6.2(@vanilla-extract/css@1.15.3)
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -5077,6 +5083,22 @@ packages:
 
   /@vanilla-extract/private@1.0.5:
     resolution: {integrity: sha512-6YXeOEKYTA3UV+RC8DeAjFk+/okoNz/h88R+McnzA2zpaVqTR/Ep+vszkWYlGBcMNO7vEkqbq5nT/JMMvhi+tw==}
+    dev: true
+
+  /@vanilla-extract/recipes@0.5.3(@vanilla-extract/css@1.15.3):
+    resolution: {integrity: sha512-SPREq1NmaoKuvJeOV0pppOkwy3pWZUoDufsyQ6iHrbkHhAU7XQqG9o0iZSmg5JoVgDLIiOr9djQb0x9wuxig7A==}
+    peerDependencies:
+      '@vanilla-extract/css': ^1.0.0
+    dependencies:
+      '@vanilla-extract/css': 1.15.3
+    dev: true
+
+  /@vanilla-extract/sprinkles@1.6.2(@vanilla-extract/css@1.15.3):
+    resolution: {integrity: sha512-SZdrxzpAFIpRImqY/N54wODYyn6swuz+Lerd7Y1ZX5/148e6J9smpsfBf/iQpmGo17OS9b+AdYBOn7OF9cn/vA==}
+    peerDependencies:
+      '@vanilla-extract/css': ^1.0.0
+    dependencies:
+      '@vanilla-extract/css': 1.15.3
     dev: true
 
   /@vanilla-extract/vite-plugin@4.0.11(vite@5.3.1):
