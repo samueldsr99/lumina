@@ -4,16 +4,17 @@ import { Box } from "../box";
 
 export interface StackProps {
   orientation?: "horizontal" | "vertical";
+  as?: "div" | "ul";
   gap?: keyof typeof spacingTokens;
   children: ReactNode;
 }
 
 export function Stack(props: StackProps): JSX.Element {
-  const { orientation = "vertical", gap = "space-4" } = props;
+  const { as, orientation = "vertical", gap = "space-4" } = props;
 
   return (
     <Box
-      as="div"
+      as={as}
       sx={{
         display: "flex",
         flexDirection: orientation === "horizontal" ? "row" : "column",
