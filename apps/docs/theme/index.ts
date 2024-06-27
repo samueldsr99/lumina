@@ -14,9 +14,9 @@ export default create({
   colorSecondary: tokens.color["openai-green"],
 
   // // UI
-  appBg: tokens.color["gray-100"],
-  // appContentBg: "#ffffff",
-  // appPreviewBg: "#ffffff",
+  appBg: tokens.color["gray-0"],
+  // appContentBg: tokens.color["gray-350"],
+  appPreviewBg: tokens.color["gray-300"],
   // appBorderColor: "#585C6D",
   // appBorderRadius: 4,
 

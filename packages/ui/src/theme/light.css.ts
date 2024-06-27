@@ -50,6 +50,8 @@ const [themeClass, vars] = createTheme({
     "Input-contrast-text": tokens.color["gray-800"],
     "Input-error-default": tokens.color["red-50"],
     "text-disabled-default": tokens.color["gray-75"],
+
+    "card-background": tokens.color["gray-0"],
   },
   border: {
     "radius-small": tokens.border.radius[30],
