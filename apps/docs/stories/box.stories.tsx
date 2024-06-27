@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Box } from "@acme/ui";
+import { Box } from "@lumina/ui";
 
 const meta: Meta<typeof Box> = {
   component: Box,

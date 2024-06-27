@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Container, Form, FormField, Heading, Stack, Input } from "@acme/ui";
+import { Container, Form, FormField, Heading, Stack, Input } from "@lumina/ui";
 
 const meta: Meta<typeof Form> = {
   component: Form,

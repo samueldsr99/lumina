@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Paragraph } from "@acme/ui";
+import { Paragraph } from "@lumina/ui";
 
 const meta: Meta<typeof Paragraph> = {
   title: "Text/Paragraph",

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ErrorText } from "@acme/ui";
+import { ErrorText } from "@lumina/ui";
 
 const meta: Meta<typeof ErrorText> = {
   component: ErrorText,

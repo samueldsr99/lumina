@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Heading } from "@acme/ui";
+import { Heading } from "@lumina/ui";
 
 const meta: Meta<typeof Heading> = {
   title: "Text/Heading",

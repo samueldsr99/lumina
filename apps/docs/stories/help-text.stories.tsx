@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { HelpText } from "@acme/ui";
+import { HelpText } from "@lumina/ui";
 
 const meta: Meta<typeof HelpText> = {
   component: HelpText,

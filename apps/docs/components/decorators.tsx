@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { theme } from "@acme/ui/theme";
+import { theme } from "@lumina/ui/theme";
 
 export function ThemeDecorator({
   children,

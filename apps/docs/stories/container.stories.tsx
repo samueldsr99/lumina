@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Container, Heading, Stack, Input } from "@acme/ui";
-import { tokens } from "@acme/ui/tokens";
+import { Container, Heading, Stack, Input } from "@lumina/ui";
+import { tokens } from "@lumina/ui/tokens";
 
 const meta: Meta<typeof Container> = {
   component: Container,
