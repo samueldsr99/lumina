@@ -18,7 +18,7 @@ export interface ContainerProps
 }
 
 export function Container({
-  center,
+  center = true,
   maxWidth = "medium",
   children,
   ...props
