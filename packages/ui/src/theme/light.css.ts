@@ -52,6 +52,17 @@ const [themeClass, vars] = createTheme({
     "text-disabled-default": tokens.color["gray-75"],
 
     "card-background": tokens.color["gray-0"],
+
+    "callout-gray-default": tokens.color["gray-100"],
+    "callout-gray-contrast-text": tokens.color["gray-800"],
+    "callout-success-default": tokens.color["green-100"],
+    "callout-warning-default": tokens.color["gold-100"],
+    "callout-danger-default": tokens.color["red-100"],
+
+    "icon-dark": tokens.color["gray-800"],
+    "icon-emphasis-green": tokens.color["openai-green"],
+    "icon-emphasis-gold": tokens.color["gold-700"],
+    "icon-emphasis-destructive": tokens.color["red-500"],
   },
   border: {
     "radius-small": tokens.border.radius[30],
