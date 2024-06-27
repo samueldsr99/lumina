@@ -17,3 +17,4 @@ export * from "./components/form";
 export * from "./components/form-field";
 export * from "./components/card";
 export * from "./components/callout";
+export * from "./components/checkbox";

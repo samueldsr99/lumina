@@ -3,6 +3,8 @@ import { tokens } from "../tokens";
 
 const [themeClass, vars] = createTheme({
   color: {
+    "primary-default": tokens.color["openai-green"],
+
     "border-default": tokens.color["gray-200"],
     "border-active": tokens.color["openai-green"],
     "border-error": tokens.color["red-500"],
@@ -63,6 +65,11 @@ const [themeClass, vars] = createTheme({
     "icon-emphasis-green": tokens.color["openai-green"],
     "icon-emphasis-gold": tokens.color["gold-700"],
     "icon-emphasis-destructive": tokens.color["red-500"],
+
+    "checkbox-default": tokens.color["gray-50"],
+    "checkbox-hover": tokens.color["green-50a"],
+    "checkbox-disabled": tokens.color["gray-200"],
+    "checkbox-border-default": tokens.color["gray-200"],
   },
   border: {
     "radius-small": tokens.border.radius[30],

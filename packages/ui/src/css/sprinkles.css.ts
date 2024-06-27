@@ -67,6 +67,7 @@ const semanticColors = lightTheme.vars.color;
 const colorProperties = {
   backgroundColor: semanticColors,
   color: semanticColors,
+  accentColor: semanticColors,
 } as const;
 
 const borderProperties = {
@@ -105,6 +106,15 @@ const allProperties = defineProperties({
     placeholder: {
       selector: "&::placeholder",
     },
+    disabled: {
+      selector: "&:disabled",
+    },
+    checked: {
+      selector: "&:checked",
+    },
+    after: {
+      selector: "&::after",
+    },
   },
   defaultCondition: "default",
 
@@ -124,6 +134,13 @@ const allProperties = defineProperties({
     backgroundImage: ["none"],
 
     cursor: ["pointer", "not-allowed"],
+
+    clipPath: {
+      "rounded-checkbox":
+        "polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%)",
+    },
+
+    appearance: ["none"],
 
     transition: ["box-shadow .2s, background-color .2s, color .2s, border .2s"],
     transform: ["translateY(-50%)"],
