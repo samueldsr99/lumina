@@ -31,12 +31,8 @@ export const Default: Story = {
     <Container {...props}>
       <Heading variant="h1">Sign in</Heading>
       <Stack gap="space-40">
-        <TextField
-          label="Email"
-          placeholder="john@doe.gmail.com"
-          type="email"
-        />
-        <TextField label="Password" placeholder="********" type="password" />
+        <TextField placeholder="john@doe.gmail.com" type="email" />
+        <TextField placeholder="********" type="password" />
       </Stack>
     </Container>
   ),

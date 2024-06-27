@@ -5,11 +5,8 @@ const meta: Meta<typeof TextField> = {
   component: TextField,
   title: "Components/Text Field",
   argTypes: {
-    label: { control: "text" },
-    helperText: { control: "text" },
-    placeholder: { control: "text" },
     error: { control: "boolean" },
-    errorMessage: { control: "text" },
+    placeholder: { control: "text" },
     disabled: { control: "boolean" },
   },
 };
@@ -22,10 +19,7 @@ export const Default: Story = {
   render: (props) => <TextField {...props} />,
   name: "Text Input",
   args: {
-    label: "Label",
-    helperText: "This is hint text to help the user.",
     placeholder: "Placeholder text",
-    error: false,
     disabled: false,
   },
 };
@@ -34,11 +28,9 @@ export const Numeric: Story = {
   render: (props) => <TextField {...props} />,
   name: "Numeric Input",
   args: {
-    label: "Label",
-    helperText: "This is hint text to help the user.",
     placeholder: "Placeholder text",
-    error: false,
     disabled: false,
+    error: false,
     type: "number",
   },
 };
@@ -46,11 +38,9 @@ export const Numeric: Story = {
 export const WithStartIcon: Story = {
   render: (props) => <TextField {...props} />,
   args: {
-    label: "Label",
-    helperText: "This is hint text to help the user.",
     placeholder: "Placeholder text",
-    error: false,
     disabled: false,
+    error: false,
     startIcon: (
       <svg
         fill="none"
@@ -73,11 +63,9 @@ export const WithStartIcon: Story = {
 export const WithEndIcon: Story = {
   render: (props) => <TextField {...props} />,
   args: {
-    label: "Label",
-    helperText: "This is hint text to help the user.",
     placeholder: "Placeholder text",
-    error: false,
     disabled: false,
+    error: false,
     endIcon: (
       <svg
         fill="none"
