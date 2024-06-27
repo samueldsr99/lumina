@@ -3,8 +3,8 @@ import { toPx } from "./utils";
 
 export const fontTokens = {
   family: {
-    sans: '"Söhne", helvetica, sans-serif',
-    mono: '"Söhne Mono", monospace',
+    sans: '"Soehne", helvetica, sans-serif',
+    mono: '"Soehne Mono", monospace',
   },
   weight: {
     normal: 400,
