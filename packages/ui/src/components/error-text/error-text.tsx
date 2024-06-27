@@ -18,6 +18,7 @@ export function ErrorText({ children }: ErrorTextProps) {
       as="p"
       className={clsx(styles.withIcon)}
       sx={{
+        ...root,
         ...paragraphSizeStyles.xsmall,
         ...paragraphMarginStyles.false,
       }}

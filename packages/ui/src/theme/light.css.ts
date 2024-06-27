@@ -44,7 +44,7 @@ const [themeClass, vars] = createTheme({
     "text-heading": tokens.color["gray-950"],
     "text-paragraph": tokens.color["gray-950"],
     "text-help": tokens.color["gray-600"],
-    "text-error": tokens.color["red-500"],
+    "text-error": tokens.color["red-700"],
     "text-label": tokens.color["gray-800"],
 
     "Input-default": tokens.color["gray-0"],
