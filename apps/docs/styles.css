@@ -25,3 +25,7 @@
   font-weight: 700;
   font-style: normal;
 }
+
+html body * {
+  font-family: "Soehne", helvetica, sans-serif !important;
+}
