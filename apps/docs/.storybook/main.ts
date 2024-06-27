@@ -8,7 +8,7 @@ function getAbsolutePath(value) {
 
 const config: StorybookConfig = {
   stories: [
-    "../stories/Home.mdx",
+    "../stories/Foundations.mdx",
     "../stories/*.mdx",
     "../stories/**/*.mdx",
     "../stories/*.stories.tsx",

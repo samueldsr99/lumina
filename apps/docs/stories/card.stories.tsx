@@ -107,14 +107,14 @@ export const Default: Story = {
   },
 };
 
-// export const FullWidth: Story = {
-//   render: (props) => (
-//     <Card {...props}>
-//       <Heading variant="h1">Title</Heading>
-//       <Paragraph size="large">Some paragraph</Paragraph>
-//     </Card>
-//   ),
-//   args: {
-//     size: "large",
-//   },
-// };
+export const FullWidth: Story = {
+  render: (props) => (
+    <Card {...props}>
+      <Heading variant="h1">Title</Heading>
+      <Paragraph size="large">Some paragraph</Paragraph>
+    </Card>
+  ),
+  args: {
+    size: "large",
+  },
+};
