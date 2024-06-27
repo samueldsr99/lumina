@@ -22,3 +22,4 @@ export function Label({ children }: LabelProps) {
     </Text>
   );
 }
+Label.displayName = "Label";

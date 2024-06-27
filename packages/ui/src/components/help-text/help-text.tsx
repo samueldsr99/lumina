@@ -22,3 +22,4 @@ export function HelpText({ children }: HelpTextProps) {
     </Text>
   );
 }
+HelpText.displayName = "HelpText";

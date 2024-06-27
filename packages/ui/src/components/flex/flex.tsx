@@ -58,3 +58,4 @@ export function Flex(props: FlexProps) {
     </Box>
   );
 }
+Flex.displayName = "Flex";

@@ -34,6 +34,7 @@ export function Text(props: TextProps): JSX.Element {
     />
   );
 }
+Text.displayName = "Text";
 
 export const root: SprinklesProperties = {
   marginTop: "space-0",

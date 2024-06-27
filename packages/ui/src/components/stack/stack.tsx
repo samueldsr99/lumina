@@ -25,3 +25,4 @@ export function Stack(props: StackProps): JSX.Element {
     </Box>
   );
 }
+Stack.displayName = "Stack";

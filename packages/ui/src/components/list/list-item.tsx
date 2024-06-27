@@ -30,3 +30,4 @@ export function ListItem({ variant, margin, children }: ListItemProps) {
     </Box>
   );
 }
+ListItem.displayName = "ListItem";

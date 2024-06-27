@@ -52,3 +52,4 @@ export function Heading({
     </Text>
   );
 }
+Heading.displayName = "Heading";

@@ -22,3 +22,4 @@ export function Box<T extends ElementType>(props: BoxProps<T>): JSX.Element {
     </Tag>
   );
 }
+Box.displayName = "Box";

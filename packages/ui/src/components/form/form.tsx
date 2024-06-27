@@ -12,3 +12,4 @@ export function Form({ onSubmit, children }: FormProps) {
     </Box>
   );
 }
+Form.displayName = "Form";

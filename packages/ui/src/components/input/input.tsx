@@ -71,6 +71,7 @@ export function Input({
     </Box>
   );
 }
+Input.displayName = "Input";
 
 export const root: SprinklesProperties = {
   boxSizing: "border-box",

@@ -29,6 +29,7 @@ export function Badge({ variant = "success", children }: BadgeProps) {
     </Box>
   );
 }
+Badge.displayName = "Badge";
 
 const root: SprinklesProperties = {
   borderRadius: 40,

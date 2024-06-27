@@ -12,3 +12,4 @@ export function List(props: ListProps) {
     </Stack>
   );
 }
+List.displayName = "List";

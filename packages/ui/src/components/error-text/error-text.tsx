@@ -26,6 +26,7 @@ export function ErrorText({ children }: ErrorTextProps) {
     </Text>
   );
 }
+ErrorText.displayName = "ErrorText";
 
 export const root: SprinklesProperties = {
   color: "text-error",

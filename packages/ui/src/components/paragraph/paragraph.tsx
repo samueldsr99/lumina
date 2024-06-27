@@ -31,6 +31,7 @@ export function Paragraph({
     </Text>
   );
 }
+Paragraph.displayName = "Paragraph";
 
 const root: SprinklesProperties = {
   color: "text-paragraph",
