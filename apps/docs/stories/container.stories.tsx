@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Container, Heading, Stack, TextField } from "@acme/ui";
+import { Container, Heading, Stack, Input } from "@acme/ui";
 import { tokens } from "@acme/ui/tokens";
 
 const meta: Meta<typeof Container> = {
@@ -31,8 +31,8 @@ export const Default: Story = {
     <Container {...props}>
       <Heading variant="h1">Sign in</Heading>
       <Stack gap="space-40">
-        <TextField placeholder="john@doe.gmail.com" type="email" />
-        <TextField placeholder="********" type="password" />
+        <Input placeholder="john@doe.gmail.com" type="email" />
+        <Input placeholder="********" type="password" />
       </Stack>
     </Container>
   ),

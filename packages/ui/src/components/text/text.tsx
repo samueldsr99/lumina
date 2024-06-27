@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { clsx } from "../../utils/clsx";
 import type { SprinklesProperties } from "../../css/sprinkles.css";
 import { sprinkles } from "../../css/sprinkles.css";
-import * as styles from "./text.css";
+import { tokens } from "../../tokens";
 
 export type TextAs =
   | "h1"
@@ -29,8 +29,13 @@ export function Text(props: TextProps): JSX.Element {
 
   return (
     <Tag
-      className={clsx(styles.root, className, sprinkles({ ...sx }))}
+      className={clsx(sprinkles({ ...root, ...sx }), className)}
       {...restProps}
     />
   );
 }
+
+export const root: SprinklesProperties = {
+  marginTop: "space-0",
+  fontFamily: tokens.font.family.sans,
+};

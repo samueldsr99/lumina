@@ -135,8 +135,8 @@ const allProperties = defineProperties({
       "button-secondary-focus-visible-shadow": `0px 0px 0px 2px ${tokens.color["openai-white"]},0px 0px 0px 4px ${lightTheme.vars.color["button-secondary-default"]}`,
       "button-destructive-focus-visible-shadow": `0px 0px 0px 2px ${tokens.color["openai-white"]},0px 0px 0px 4px ${lightTheme.vars.color["button-destructive-default"]}`,
 
-      "textfield-default-focus-shadow": `0 0 0 1px ${lightTheme.vars.color["border-active"]}`,
-      "textfield-error-focus-shadow": `0 0 0 1px ${lightTheme.vars.color["border-error"]}`,
+      "Input-default-focus-shadow": `0 0 0 1px ${lightTheme.vars.color["border-active"]}`,
+      "Input-error-focus-shadow": `0 0 0 1px ${lightTheme.vars.color["border-error"]}`,
     },
     outline: ["none"],
 

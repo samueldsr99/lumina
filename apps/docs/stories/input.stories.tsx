@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TextField } from "@acme/ui";
+import { Input } from "@acme/ui";
 
-const meta: Meta<typeof TextField> = {
-  component: TextField,
-  title: "Components/Text Field",
+const meta: Meta<typeof Input> = {
+  component: Input,
+  title: "Components/Input",
   argTypes: {
     error: { control: "boolean" },
     placeholder: { control: "text" },
@@ -13,10 +13,10 @@ const meta: Meta<typeof TextField> = {
 
 export default meta;
 
-type Story = StoryObj<typeof TextField>;
+type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
-  render: (props) => <TextField {...props} />,
+  render: (props) => <Input {...props} />,
   name: "Text Input",
   args: {
     placeholder: "Placeholder text",
@@ -25,7 +25,7 @@ export const Default: Story = {
 };
 
 export const Numeric: Story = {
-  render: (props) => <TextField {...props} />,
+  render: (props) => <Input {...props} />,
   name: "Numeric Input",
   args: {
     placeholder: "Placeholder text",
@@ -36,12 +36,12 @@ export const Numeric: Story = {
 };
 
 export const WithStartIcon: Story = {
-  render: (props) => <TextField {...props} />,
+  render: (props) => <Input {...props} />,
   args: {
     placeholder: "Placeholder text",
     disabled: false,
     error: false,
-    startIcon: (
+    icon: (
       <svg
         fill="none"
         height="17"
@@ -57,16 +57,17 @@ export const WithStartIcon: Story = {
         />
       </svg>
     ),
+    iconPosition: "start",
   },
 };
 
 export const WithEndIcon: Story = {
-  render: (props) => <TextField {...props} />,
+  render: (props) => <Input {...props} />,
   args: {
     placeholder: "Placeholder text",
     disabled: false,
     error: false,
-    endIcon: (
+    icon: (
       <svg
         fill="none"
         height="17"
@@ -82,5 +83,6 @@ export const WithEndIcon: Story = {
         />
       </svg>
     ),
+    iconPosition: "end",
   },
 };

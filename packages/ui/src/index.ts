@@ -12,6 +12,6 @@ export * from "./components/list";
 export * from "./components/paragraph";
 export * from "./components/stack";
 export * from "./components/text";
-export * from "./components/text-field";
+export * from "./components/input";
 export * from "./components/form";
 export * from "./components/form-field";

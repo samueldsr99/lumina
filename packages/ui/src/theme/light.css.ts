@@ -45,10 +45,10 @@ const [themeClass, vars] = createTheme({
     "text-error": tokens.color["red-500"],
     "text-label": tokens.color["gray-800"],
 
-    "textfield-default": tokens.color["gray-0"],
-    "textfield-placeholder-text": tokens.color["gray-500"],
-    "textfield-contrast-text": tokens.color["gray-800"],
-    "textfield-error-default": tokens.color["red-50"],
+    "Input-default": tokens.color["gray-0"],
+    "Input-placeholder-text": tokens.color["gray-500"],
+    "Input-contrast-text": tokens.color["gray-800"],
+    "Input-error-default": tokens.color["red-50"],
     "text-disabled-default": tokens.color["gray-75"],
   },
   border: {

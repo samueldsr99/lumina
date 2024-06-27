@@ -1,7 +1,11 @@
 import type { ReactNode } from "react";
 import { Text } from "../text";
 import { clsx } from "../../utils/clsx";
-import * as paragraphStyles from "../paragraph/paragraph.css";
+import {
+  sizeStyles as paragraphSizeStyles,
+  marginStyles as paragraphMarginStyles,
+} from "../paragraph/paragraph";
+import type { SprinklesProperties } from "../../css/sprinkles.css";
 import * as styles from "./error-text.css";
 
 export interface ErrorTextProps {
@@ -12,14 +16,17 @@ export function ErrorText({ children }: ErrorTextProps) {
   return (
     <Text
       as="p"
-      className={clsx(
-        styles.root,
-        styles.withIcon,
-        paragraphStyles.size.xsmall,
-        paragraphStyles.margin.false
-      )}
+      className={clsx(styles.withIcon)}
+      sx={{
+        ...paragraphSizeStyles.xsmall,
+        ...paragraphMarginStyles.false,
+      }}
     >
       {children}
     </Text>
   );
 }
+
+export const root: SprinklesProperties = {
+  color: "text-error",
+};

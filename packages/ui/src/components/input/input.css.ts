@@ -10,8 +10,8 @@ export const root = sprinkles({
   paddingX: "space-10",
   border: "solid",
   color: {
-    default: "textfield-contrast-text",
-    placeholder: "textfield-placeholder-text",
+    default: "Input-contrast-text",
+    placeholder: "Input-placeholder-text",
   },
   borderRadius: 40,
   outline: "none",
@@ -21,17 +21,17 @@ export const root = sprinkles({
 
 export const variant = {
   defaulted: sprinkles({
-    backgroundColor: "textfield-default",
+    backgroundColor: "Input-default",
     borderColor: {
       default: "border-default",
       focus: "border-active",
     },
     boxShadow: {
-      focus: "textfield-default-focus-shadow",
+      focus: "Input-default-focus-shadow",
     },
   }),
   error: sprinkles({
-    backgroundColor: "textfield-error-default",
+    backgroundColor: "Input-error-default",
     borderColor: "border-error",
   }),
   disabled: sprinkles({
