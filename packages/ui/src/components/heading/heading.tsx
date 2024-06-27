@@ -7,6 +7,7 @@ type HeadingVariants = "h1" | "h2" | "h3" | "h4";
 export interface HeadingProps {
   children?: ReactNode;
   variant?: HeadingVariants;
+  as?: HeadingVariants;
   margin?: boolean;
 }
 
@@ -36,12 +37,13 @@ const variantStyles: Record<HeadingVariants, SprinklesProperties> = {
 
 export function Heading({
   children,
+  as = "h1",
   variant = "h1",
   margin = true,
 }: HeadingProps): JSX.Element {
   return (
     <Text
-      as={variant}
+      as={as}
       sx={{
         ...root,
         ...variantStyles[variant],

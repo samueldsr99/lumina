@@ -4,11 +4,14 @@ import type { SprinklesProperties } from "../../css/sprinkles.css";
 
 export type ParagraphSize = "xsmall" | "small" | "regular" | "large" | "xlarge";
 
+type ParagraphVariants = "body" | "caption";
+
 export interface ParagraphProps {
   children?: ReactNode;
   size?: ParagraphSize;
   margin?: boolean;
   strong?: boolean;
+  variant?: ParagraphVariants;
 }
 
 export function Paragraph({
@@ -16,6 +19,7 @@ export function Paragraph({
   size = "regular",
   margin = true,
   strong = false,
+  variant = "body",
 }: ParagraphProps): JSX.Element {
   return (
     <Text
@@ -25,6 +29,7 @@ export function Paragraph({
         ...sizeStyles[size],
         ...marginStyles[margin ? "true" : "false"],
         ...strongStyles[strong ? "true" : "false"],
+        ...variantStyles[variant],
       }}
     >
       {children}
@@ -75,5 +80,12 @@ export const sizeStyles: Record<ParagraphSize, SprinklesProperties> = {
   xlarge: {
     fontSize: 70,
     lineHeight: 120,
+  },
+};
+
+const variantStyles: Record<ParagraphVariants, SprinklesProperties> = {
+  body: {},
+  caption: {
+    color: "text-help",
   },
 };
