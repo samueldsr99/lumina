@@ -1,27 +1,27 @@
 @font-face {
   font-family: "Söhne";
-  src: url("/fonts/Söhne/test-soehne-buch.woff2") format("woff2");
+  src: url("/fonts/söhne/test-soehne-buch.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Söhne";
-  src: url("/fonts/Söhne/test-soehne-kraftig.woff2") format("woff2");
+  src: url("/fonts/söhne/test-soehne-kraftig.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Söhne";
-  src: url("/fonts/Söhne/test-soehne-halbfett.woff2") format("woff2");
+  src: url("/fonts/söhne/test-soehne-halbfett.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Söhne";
-  src: url("/fonts/Söhne/test-soehne-dreiviertelfett.woff2") format("woff2");
+  src: url("/fonts/söhne/test-soehne-dreiviertelfett.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
