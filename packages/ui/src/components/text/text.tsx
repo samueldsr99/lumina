@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 import { clsx } from "../../utils/clsx";
+import type { SprinklesProperties } from "../../css/sprinkles.css";
+import { sprinkles } from "../../css/sprinkles.css";
 import * as styles from "./text.css";
 
 export type TextAs =
@@ -17,12 +19,18 @@ export type TextAs =
 export interface TextProps {
   as: TextAs;
   children?: ReactNode;
+  sx?: SprinklesProperties;
   margin?: boolean;
   className?: string;
 }
 
 export function Text(props: TextProps): JSX.Element {
-  const { as: Tag, className, ...restProps } = props;
+  const { as: Tag, sx, className, ...restProps } = props;
 
-  return <Tag className={clsx(styles.root, className)} {...restProps} />;
+  return (
+    <Tag
+      className={clsx(styles.root, className, sprinkles({ ...sx }))}
+      {...restProps}
+    />
+  );
 }
