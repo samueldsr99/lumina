@@ -1,4 +1,5 @@
 import { borderTokens } from "./border";
+import { breakpointTokens } from "./breakpoints";
 import { colorTokens } from "./color";
 import { fontTokens } from "./font";
 import { sizeTokens } from "./size";
@@ -10,4 +11,5 @@ export const tokens = {
   font: fontTokens,
   spacing: spacingTokens,
   border: borderTokens,
+  breakpoint: breakpointTokens,
 };

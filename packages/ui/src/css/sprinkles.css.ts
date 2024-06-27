@@ -39,15 +39,17 @@ const flexProperties = {
   flexGrow: [0, 1],
 } as const;
 
+const spacingTokensWithAuto = { ...spacingTokens, auto: "auto" };
+
 const spacingProperties = {
   gap: spacingTokens,
   rowGap: spacingTokens,
   columnGap: spacingTokens,
-  margin: spacingTokens,
-  marginTop: spacingTokens,
-  marginRight: spacingTokens,
-  marginBottom: spacingTokens,
-  marginLeft: spacingTokens,
+  margin: spacingTokensWithAuto,
+  marginTop: spacingTokensWithAuto,
+  marginRight: spacingTokensWithAuto,
+  marginBottom: spacingTokensWithAuto,
+  marginLeft: spacingTokensWithAuto,
   padding: spacingTokens,
   paddingTop: spacingTokens,
   paddingRight: spacingTokens,
@@ -109,6 +111,7 @@ const allProperties = defineProperties({
   properties: {
     content: [""],
     boxSizing: ["border-box"],
+    maxWidth: tokens.breakpoint,
 
     position: ["relative", "absolute", "fixed", "sticky"],
     left: positionTokens,
@@ -159,3 +162,5 @@ const allProperties = defineProperties({
 export const sprinkles = createSprinkles(allProperties);
 
 export type SprinklesProperties = Parameters<typeof sprinkles>[0];
+
+export type SpacingValues = keyof typeof spacingTokens;
