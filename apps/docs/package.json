@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@lumina/ui": "workspace:*",
-    "@storybook/blocks": "^8.1.11",
-    "@storybook/theming": "^8.1.11",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/theming": "^7.6.17",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

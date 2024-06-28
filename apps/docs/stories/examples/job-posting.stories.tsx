@@ -23,6 +23,34 @@ export default meta;
 
 type Story = StoryObj<typeof Container>;
 
+function Icon(): JSX.Element {
+  return (
+    <svg
+      fill="none"
+      height="10"
+      viewBox="0 0 10 10"
+      width="10"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clipPath="url(#clip0_338_1024)">
+        <path d="M1 9L9 1L1 9ZM9 1H2.5H9ZM9 1V7.22222V1Z" fill="#353740" />
+        <path
+          d="M1 9L9 1M9 1H2.5M9 1V7.22222"
+          stroke="#353740"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.25"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_338_1024">
+          <rect fill="white" height="10" width="10" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}
+
 function JobPostingPage(): JSX.Element {
   const [search, setSearch] = useState("");
 
@@ -75,17 +103,42 @@ function JobPostingPage(): JSX.Element {
             <Grid container gap="space-20">
               {filteredJobs.map((job) => (
                 <Card key={job.id}>
-                  <Heading as="h2" margin={false} variant="h3">
-                    {job.title}
-                  </Heading>
-                  <Paragraph variant="caption">{job.location}</Paragraph>
-                  <Paragraph>{job.description}</Paragraph>
-                  <Flex container gap="space-20" orientation="horizontal" wrap>
-                    {job.skills.map((skill) => (
-                      <Badge key={skill.name} variant="gray">
-                        {skill.name}
-                      </Badge>
-                    ))}
+                  <Flex
+                    container
+                    gap="space-60"
+                    justifyContent="space-between"
+                    orientation="vertical"
+                  >
+                    <Stack>
+                      <Heading as="h2" margin={false} variant="h3">
+                        {job.title}
+                      </Heading>
+                      <Paragraph variant="caption">{job.location}</Paragraph>
+                      <Paragraph>{job.description}</Paragraph>
+                      <Flex
+                        container
+                        gap="space-20"
+                        orientation="horizontal"
+                        wrap
+                      >
+                        {job.skills.map((skill) => (
+                          <Badge key={skill.name} variant="gray">
+                            {skill.name}
+                          </Badge>
+                        ))}
+                      </Flex>
+                    </Stack>
+
+                    <Flex
+                      alignItems="flex-end"
+                      container
+                      justifyContent="flex-end"
+                    >
+                      <Button>
+                        Apply
+                        <Icon />
+                      </Button>
+                    </Flex>
                   </Flex>
                 </Card>
               ))}
