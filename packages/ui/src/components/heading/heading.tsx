@@ -9,6 +9,7 @@ export interface HeadingProps {
   variant?: HeadingVariants;
   as?: HeadingVariants;
   margin?: boolean;
+  center?: boolean;
 }
 
 const root: SprinklesProperties = {
@@ -40,6 +41,7 @@ export function Heading({
   as = "h1",
   variant = "h1",
   margin = true,
+  center = false,
 }: HeadingProps): JSX.Element {
   return (
     <Text
@@ -48,6 +50,7 @@ export function Heading({
         ...root,
         ...variantStyles[variant],
         ...(margin ? { marginBottom: "space-70" } : { margin: "space-0" }),
+        ...(center ? { textAlign: "center" } : {}),
       }}
     >
       {children}

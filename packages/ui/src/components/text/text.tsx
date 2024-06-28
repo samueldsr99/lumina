@@ -3,6 +3,7 @@ import { clsx } from "../../utils/clsx";
 import type { SprinklesProperties } from "../../css/sprinkles.css";
 import { sprinkles } from "../../css/sprinkles.css";
 import { tokens } from "../../tokens";
+import type { AsProp, PropsToOmit } from "../box/box";
 
 export type TextAs =
   | "h1"
@@ -16,16 +17,15 @@ export type TextAs =
   | "span"
   | "label";
 
-export interface TextProps {
-  as: TextAs;
-  children?: ReactNode;
-  sx?: SprinklesProperties;
-  margin?: boolean;
-  className?: string;
-}
+export type TextProps<T extends React.ElementType> = AsProp<T> &
+  Omit<React.ComponentPropsWithoutRef<T>, PropsToOmit<T, AsProp<T>>> & {
+    sx?: SprinklesProperties;
+  };
 
-export function Text(props: TextProps): JSX.Element {
-  const { as: Tag, sx, className, ...restProps } = props;
+export function Text<T extends React.ElementType>(
+  props: TextProps<T>
+): JSX.Element {
+  const { as: Tag = "p", sx, className, ...restProps } = props;
 
   return (
     <Tag

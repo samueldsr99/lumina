@@ -14,6 +14,7 @@ export function Card({ children, size = "small" }: CardProps) {
         backgroundColor: "card-background",
         paddingX: size === "small" ? "space-60" : "space-120",
         paddingY: size === "small" ? "space-80" : "space-120",
+        marginX: "auto",
         boxSizing: "border-box",
         borderRadius: 30,
         ...(size === "large" ? {} : { maxWidth: "xsmall" }),

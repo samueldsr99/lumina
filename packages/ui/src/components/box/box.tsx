@@ -2,11 +2,11 @@ import type { ElementType } from "react";
 import type { SprinklesProperties } from "../../css/sprinkles.css";
 import { sprinkles } from "../../css/sprinkles.css";
 
-interface AsProp<T extends ElementType> {
+export interface AsProp<T extends ElementType> {
   as?: T;
 }
 
-type PropsToOmit<T extends ElementType, P> = keyof (AsProp<T> & P);
+export type PropsToOmit<T extends ElementType, P> = keyof (AsProp<T> & P);
 
 export type BoxProps<T extends React.ElementType> = AsProp<T> &
   Omit<React.ComponentPropsWithoutRef<T>, PropsToOmit<T, AsProp<T>>> & {

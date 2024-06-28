@@ -1,10 +1,11 @@
-import type { ReactNode } from "react";
+import { forwardRef, type ReactNode } from "react";
 import type { SprinklesProperties } from "../../css/sprinkles.css";
 import { tokens } from "../../tokens";
 import { Box } from "../box";
 import { sizeStyles as paragraphSizeStyles } from "../paragraph/paragraph";
+import type { BaseComponentProps } from "../types";
 
-export interface InputProps {
+export interface InputProps extends BaseComponentProps<"input"> {
   placeholder?: string;
   disabled?: boolean;
   error?: boolean;
@@ -37,40 +38,48 @@ function IconContainer({
   );
 }
 
-export function Input({
-  placeholder,
-  icon,
-  iconPosition = "start",
-  disabled = false,
-  type = "text",
-  error = false,
-}: InputProps) {
-  // eslint-disable-next-line no-nested-ternary -- This ternary is readable
-  const variant = disabled ? "disabled" : error ? "error" : "defaulted";
+export const Input = forwardRef<HTMLInputElement, InputProps>(
+  (
+    {
+      placeholder,
+      icon,
+      iconPosition = "start",
+      disabled = false,
+      type = "text",
+      error = false,
+      ...props
+    },
+    ref
+  ) => {
+    // eslint-disable-next-line no-nested-ternary -- Is fine
+    const variant = disabled ? "disabled" : error ? "error" : "defaulted";
 
-  return (
-    <Box as="div" sx={{ position: "relative" }}>
-      {icon && iconPosition === "start" ? (
-        <IconContainer left>{icon}</IconContainer>
-      ) : null}
-      <Box
-        as="input"
-        disabled={disabled}
-        placeholder={placeholder}
-        sx={{
-          ...root,
-          ...variantStyles[variant],
-          ...(icon ? withIcon[iconPosition] : null),
-          ...paragraphSizeStyles.small,
-        }}
-        type={type}
-      />
-      {icon && iconPosition === "end" ? (
-        <IconContainer left={false}>{icon}</IconContainer>
-      ) : null}
-    </Box>
-  );
-}
+    return (
+      <Box as="div" sx={{ position: "relative" }}>
+        {icon && iconPosition === "start" ? (
+          <IconContainer left>{icon}</IconContainer>
+        ) : null}
+        <Box
+          as="input"
+          disabled={disabled}
+          placeholder={placeholder}
+          ref={ref}
+          sx={{
+            ...root,
+            ...variantStyles[variant],
+            ...(icon ? withIcon[iconPosition] : null),
+            ...paragraphSizeStyles.small,
+          }}
+          type={type}
+          {...props}
+        />
+        {icon && iconPosition === "end" ? (
+          <IconContainer left={false}>{icon}</IconContainer>
+        ) : null}
+      </Box>
+    );
+  }
+);
 Input.displayName = "Input";
 
 export const root: SprinklesProperties = {

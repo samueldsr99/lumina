@@ -8,6 +8,8 @@ export interface FormFieldProps {
   helperText?: string;
   errorMessage?: string;
   children: React.ReactNode;
+  required?: boolean;
+  htmlFor?: string;
 }
 
 export function FormField({
@@ -15,10 +17,16 @@ export function FormField({
   helperText,
   errorMessage,
   children,
+  required = false,
+  htmlFor,
 }: FormFieldProps) {
   return (
     <Stack gap="space-4">
-      {label ? <Label>{label}</Label> : null}
+      {label ? (
+        <Label htmlFor={htmlFor}>
+          {label} {required ? "*" : null}
+        </Label>
+      ) : null}
       {helperText ? <HelpText>{helperText}</HelpText> : null}
       {children}
       {errorMessage ? <ErrorText>{errorMessage}</ErrorText> : null}

@@ -5,10 +5,11 @@ import { clsx } from "../../utils/clsx";
 import * as styles from "./label.css";
 
 export interface LabelProps {
+  htmlFor?: string;
   children?: ReactNode;
 }
 
-export function Label({ children }: LabelProps) {
+export function Label({ htmlFor, children }: LabelProps) {
   return (
     <Text
       as="label"
@@ -17,6 +18,7 @@ export function Label({ children }: LabelProps) {
         paragraphStyles.size.regular,
         paragraphStyles.strong.true
       )}
+      htmlFor={htmlFor}
     >
       {children}
     </Text>

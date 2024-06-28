@@ -6,6 +6,8 @@ import { sizeTokens } from "../tokens/size";
 import { lightTheme } from "../theme/light.css";
 import { tokens } from "../tokens";
 
+export type GridValue = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+
 const flexProperties = {
   display: [
     "block",
@@ -133,6 +135,8 @@ const allProperties = defineProperties({
     backgroundRepeat: ["no-repeat", "repeat", "repeat-x", "repeat-y"],
     backgroundImage: ["none"],
 
+    textAlign: ["left", "center", "right"],
+
     cursor: ["pointer", "not-allowed"],
 
     clipPath: {
@@ -141,6 +145,27 @@ const allProperties = defineProperties({
     },
 
     appearance: ["none"],
+
+    gridTemplateColumns: {
+      "1": "repeat(1, minmax(0, 1fr))",
+      "2": "repeat(2, minmax(0, 1fr))",
+      "3": "repeat(3, minmax(0, 1fr))",
+    },
+
+    gridColumn: {
+      "1": "span 1 / span 1",
+      "2": "span 2 / span 2",
+      "3": "span 3 / span 3",
+      "4": "span 4 / span 4",
+      "5": "span 5 / span 5",
+      "6": "span 6 / span 6",
+      "7": "span 7 / span 7",
+      "8": "span 8 / span 8",
+      "9": "span 9 / span 9",
+      "10": "span 10 / span 10",
+      "11": "span 11 / span 11",
+      "12": "span 12 / span 12",
+    },
 
     transition: ["box-shadow .2s, background-color .2s, color .2s, border .2s"],
     transform: ["translateY(-50%)"],
