@@ -4,6 +4,8 @@
 
 > This project was completed as fulfillment of the course Design Systems for Interactive Systems taught by Pablo Deeleman at Harbour.Space University (Barcelona).
 
+> Authors: Red Rivera and Samuel D.
+
 The OpenAI Lumina Design System driven by three essential core principles: Consistent, Accessible, and Semantic.
 
 Lumina empowers designers and developers by providing a comprehensive, consistent, and flexible framework that enhances efficiency, collaboration, and innovation.
