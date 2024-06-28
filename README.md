@@ -2,51 +2,61 @@
 
 # Welcome to the Lumina Design System!
 
-The name "Lumina" evokes light and clarity, mirroring our commitment to creating an accessible and user-friendly design system. Lumina, as a name, signifies a design system that is not only intuitive and clear but also expansive, casting light on the vast possibilities of AI while ensuring an inclusive user experience.
+> This project was completed as fulfillment of the course Design Systems for Interactive Systems taught by Pablo Deeleman at Harbour.Space University (Barcelona).
 
 The OpenAI Lumina Design System driven by three essential core principles: Consistent, Accessible, and Semantic.
 
-These principles are deeply intertwined with our brand values of Gravitas, Precision, Approachability, Allure, and Boldness, ensuring a holistic approach to design that aligns with the organization's mission and ethos.
-
 Lumina empowers designers and developers by providing a comprehensive, consistent, and flexible framework that enhances efficiency, collaboration, and innovation.
 
-For designers, it offers the tools and guidelines needed to create visually cohesive and accessible interfaces quickly. For developers, it provides a reliable, well-documented set of components that streamline the development process and ensure high-quality, scalable, and performant applications.
+## Installation
 
-Together, these benefits help teams deliver superior user experiences that align with our mission to ensure that artificial general intelligence benefits all of humanity.
+To install the monorepo dependencies run
 
-## Consistent
+```bash
+pnpm install
+```
 
-Consistency ensures a seamless and unified user experience across all touchpoints. This principle is not just about visual uniformity but also about creating a reliable and predictable user journey.
+## Usage
 
-Below are guidelines we follow:
+The ui folder serves a `@lumina/ui` packages which can be consumed within every app in `apps/` folder. To setup the design system in a new app do the following:
 
-- **Color Palette**: A defined a primary, secondary, and semantic color palette with specific color codes (HEX, RGB). The Design System ensures these colors are used consistently in all design elements.
-- **Typography**: Established font families, sizes, weights, and line heights, clearly defined to maintain brand identity and readability.
-- **Components**: Featuring a library of reusable UI components (buttons, forms, cards, etc.) with standardized styles and behaviors.
-- **Documentation**: Provide detailed guidelines and examples to ensure designers and developers adhere to the established patterns.
+Add to your project's `package.json` the following dependency
 
-## Accessible
+```json
+    "@lumina/ui": "workspace:*",
+```
 
-Accessibility ensures that all users, regardless of their abilities, can engage with and benefit from the design system. It embodies inclusivity and empathy, ensuring that technology serves everyone.
+Install to link your project to the library
 
-![Lumina Accessible](./apps/docs/public/images/bg-2.png)
+```bash
+pnpm install
+```
 
-Below are guidelines we follow:
+Include the base styles into your project
 
-- **Color Contrast**: Ensure text and background color combinations meet WCAG AA or AAA standards to enhance readability.
-- **Keyboard Navigation**: Design interactive elements to be accessible via keyboard, providing a clear focus state for navigation.
-- **Screen Reader Support**: Use semantic HTML elements and ARIA (Accessible Rich Internet Applications) attributes to support screen readers.
-- **Text Alternatives**: Provide alternative text for images, icons, and other non-text content to convey information to users with visual impairments.
+```typescript
+import "@lumina/ui/styles.css";
+```
 
-## Semantic
+Then you can use the components like so:
 
-Semantic clarity ensures that every design element is meaningful and contributes to the overall understanding and usability of the system. It focuses on clear communication and purposeful design.
+```typescript
+import { Container, Button } from "@lumina/ui";
 
-![Lumina Semantic](./apps/docs/public/images/bg-3.png)
+export function Main() {
+  return (
+    <Container>
+      <Button>Click me</Button>
+    </Container>
+  )
+}
+```
 
-Below are guidelines we follow:
+You can also use the theme variables and tokens
 
-- **Design Tokens**: Define and document design tokens for colors, typography, spacing, and other design attributes. Ensure these tokens are used consistently across design and development.
-- **Semantic HTML**: Use appropriate HTML tags to convey meaning and structure (e.g., \<header\>, \<nav\>, \<main\>, \<section\>, \<article\>, \<footer\>).
-- **Guessability**: Design interfaces that are intuitive and easy to use, reducing the learning curve for new users.
-- **Code Consistency**: Ensure that design tokens are integrated into the codebase, making it easy for developers to reference and apply consistent styles.
+```typescript
+import { theme } from "@lumina/ui/theme";
+import { tokens } from "@lumina/ui/tokens";
+
+// theme.lightTheme is the default theme
+```
