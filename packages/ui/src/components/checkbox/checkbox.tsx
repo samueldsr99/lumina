@@ -33,6 +33,7 @@ export function Checkbox({
     </Box>
   );
 }
+Checkbox.displayName = "Checkbox";
 
 const root: SprinklesProperties = {
   border: "solid",
