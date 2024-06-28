@@ -28,7 +28,8 @@ export const jobs = [
     title: "UX Designer",
     location: "New York, NY",
     description:
-      "We are looking for a UX Designer to join our team in New York, NY.",
+      "We are looking for a Product Manager to join our team remotely.",
+
     skills: [
       { name: "User Experience", variant: "gray" },
       { name: "User Interface", variant: "gray" },
@@ -40,7 +41,7 @@ export const jobs = [
     title: "Data Scientist",
     location: "Chicago, IL",
     description:
-      "We are looking for a Data Scientist to join our team in Chicago, IL.",
+      "We are looking for a Product Manager to join our team remotely.",
     skills: [
       { name: "Data Science", variant: "gray" },
       { name: "Machine Learning", variant: "gray" },
@@ -52,7 +53,7 @@ export const jobs = [
     title: "Marketing Manager",
     location: "Los Angeles, CA",
     description:
-      "We are looking for a Marketing Manager to join our team in Los Angeles, CA.",
+      "We are looking for a Product Manager to join our team remotely.",
     skills: [
       { name: "Marketing", variant: "gray" },
       { name: "Social Media", variant: "gray" },
@@ -65,7 +66,7 @@ export const jobs = [
     title: "Senior Software Engineer",
     location: "San Francisco, CA",
     description:
-      "We are looking for a Senior Software Engineer to join our team in San Francisco, CA.",
+      "We are looking for a Product Manager to join our team remotely.",
     skills: [
       { name: "JavaScript", variant: "gray" },
       { name: "React", variant: "gray" },
@@ -89,7 +90,7 @@ export const jobs = [
     title: "UX Designer",
     location: "New York, NY",
     description:
-      "We are looking for a UX Designer to join our team in New York, NY.",
+      "We are looking for a Product Manager to join our team remotely.",
     skills: [
       { name: "User Experience", variant: "gray" },
       { name: "User Interface", variant: "gray" },
@@ -101,7 +102,7 @@ export const jobs = [
     title: "Data Scientist",
     location: "Chicago, IL",
     description:
-      "We are looking for a Data Scientist to join our team in Chicago, IL.",
+      "We are looking for a Product Manager to join our team remotely.",
     skills: [
       { name: "Data Science", variant: "gray" },
       { name: "Machine Learning", variant: "gray" },
@@ -113,7 +114,7 @@ export const jobs = [
     title: "Marketing Manager",
     location: "Los Angeles, CA",
     description:
-      "We are looking for a Marketing Manager to join our team in Los Angeles, CA.",
+      "We are looking for a Product Manager to join our team remotely.",
     skills: [
       { name: "Marketing", variant: "gray" },
       { name: "Social Media", variant: "gray" },
