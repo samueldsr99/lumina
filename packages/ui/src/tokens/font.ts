@@ -24,6 +24,8 @@ export const fontTokens = {
     90: toPx(sizeTokens["size-90"]),
     100: toPx(sizeTokens["size-100"]),
     110: toPx(sizeTokens["size-110"]),
+    140: toPx(sizeTokens["size-140"]),
+    200: toPx(sizeTokens["size-200"]),
   },
   lineHeight: {
     10: toPx(sizeTokens["size-10"]),
@@ -40,5 +42,7 @@ export const fontTokens = {
     120: toPx(sizeTokens["size-120"]),
     130: toPx(sizeTokens["size-130"]),
     140: toPx(sizeTokens["size-140"]),
+    180: toPx(sizeTokens["size-180"]),
+    200: toPx(sizeTokens["size-200"]),
   },
 } as const;

@@ -8,6 +8,7 @@ export default create({
   fontCode: '"Soehne Mono", monospace',
 
   brandTitle: "Lumina",
+  brandTarget: "_self",
   brandUrl: "https://github.com/samueldsr99/lumina",
 
   colorPrimary: tokens.color["gold-700"],

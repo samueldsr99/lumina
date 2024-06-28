@@ -2,12 +2,13 @@ import type { ReactNode } from "react";
 import { Text } from "../text";
 import type { SprinklesProperties } from "../../css/sprinkles.css";
 
-type HeadingVariants = "h1" | "h2" | "h3" | "h4";
+type HeadingVariants = "h1" | "h2" | "h3" | "h4" | "jumbo";
+type HeadingAs = "h1" | "h2" | "h3" | "h4";
 
 export interface HeadingProps {
   children?: ReactNode;
   variant?: HeadingVariants;
-  as?: HeadingVariants;
+  as?: HeadingAs;
   margin?: boolean;
   center?: boolean;
 }
@@ -18,6 +19,10 @@ const root: SprinklesProperties = {
 };
 
 const variantStyles: Record<HeadingVariants, SprinklesProperties> = {
+  jumbo: {
+    fontSize: 200,
+    lineHeight: 140,
+  },
   h1: {
     fontSize: 110,
     lineHeight: 140,
