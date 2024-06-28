@@ -1,9 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Input } from "@lumina/ui";
+import { Container, Input } from "@lumina/ui";
 
 const meta: Meta<typeof Input> = {
   component: Input,
   title: "Components/Input",
+  decorators: [
+    (Story) => (
+      <Container center maxWidth="xsmall">
+        <Story />
+      </Container>
+    ),
+  ],
   argTypes: {
     error: { control: "boolean" },
     placeholder: { control: "text" },
