@@ -1,7 +1,7 @@
-import { clsx } from "../../utils/clsx";
+import type { SprinklesProperties } from "../../css/sprinkles.css";
+import { tokens } from "../../tokens";
 import { Box } from "../box";
-import * as paragraphStyles from "../paragraph/paragraph.css";
-import * as styles from "./list-item.css";
+import { sizeStyles as paragraphSizeStyles } from "../paragraph/paragraph";
 
 export interface ListItemProps {
   variant?: "dot" | "check";
@@ -12,22 +12,44 @@ export interface ListItemProps {
 export function ListItem({ variant, margin, children }: ListItemProps) {
   const textStyles =
     variant === "check"
-      ? paragraphStyles.size.large
-      : paragraphStyles.size.regular;
+      ? paragraphSizeStyles.large
+      : paragraphSizeStyles.regular;
 
   return (
     <Box
       as="li"
-      className={clsx(
-        styles.root,
-        textStyles,
-        styles.margin[margin ? "true" : "false"],
-        styles.variant[variant ?? "dot"],
-        variant === "check" && styles.withCheckIcon
-      )}
+      sx={{
+        ...root,
+        ...textStyles,
+        ...marginStyles[margin ? "true" : "false"],
+        ...variantStyles[variant ?? "dot"],
+      }}
     >
       {children}
     </Box>
   );
 }
 ListItem.displayName = "ListItem";
+
+const root: SprinklesProperties = {
+  fontFamily: tokens.font.family.sans,
+  position: "relative",
+};
+
+export const marginStyles: Record<"true" | "false", SprinklesProperties> = {
+  true: {
+    marginBottom: "space-70",
+  },
+  false: {
+    marginBottom: "space-0",
+  },
+};
+
+const variantStyles: Record<"dot" | "check", SprinklesProperties> = {
+  dot: {},
+  check: {
+    listStyle: "none",
+    background: "list-item-check",
+    paddingLeft: "space-60",
+  },
+};

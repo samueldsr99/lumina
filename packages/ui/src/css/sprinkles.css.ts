@@ -134,6 +134,9 @@ const allProperties = defineProperties({
 
     backgroundRepeat: ["no-repeat", "repeat", "repeat-x", "repeat-y"],
     backgroundImage: ["none"],
+    background: {
+      "list-item-check": `url(../icons/check-icon.svg) no-repeat left center`,
+    },
 
     textAlign: ["left", "center", "right"],
 
@@ -166,6 +169,8 @@ const allProperties = defineProperties({
       "11": "span 11 / span 11",
       "12": "span 12 / span 12",
     },
+
+    listStyle: ["none"],
 
     transition: ["box-shadow .2s, background-color .2s, color .2s, border .2s"],
     transform: ["translateY(-50%)"],
