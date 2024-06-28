@@ -29,7 +29,7 @@ Below are guidelines we follow:
 
 Accessibility ensures that all users, regardless of their abilities, can engage with and benefit from the design system. It embodies inclusivity and empathy, ensuring that technology serves everyone.
 
-![Lumina Accessible](./apps/docs/images/bg-2.png)
+![Lumina Accessible](./apps/docs/public/images/bg-2.png)
 
 Below are guidelines we follow:
 
@@ -42,7 +42,7 @@ Below are guidelines we follow:
 
 Semantic clarity ensures that every design element is meaningful and contributes to the overall understanding and usability of the system. It focuses on clear communication and purposeful design.
 
-![Lumina Semantic](./apps/docs/images/bg-3.png)
+![Lumina Semantic](./apps/docs/public/images/bg-3.png)
 
 Below are guidelines we follow:
 
