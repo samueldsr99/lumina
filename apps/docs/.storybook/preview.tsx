@@ -4,7 +4,6 @@ import { ThemeDecorator } from "../components/decorators";
 
 import "@lumina/ui/styles.css";
 import "../styles.css";
-import { tokens } from "@lumina/ui/tokens";
 
 const preview: Preview = {
   parameters: {
@@ -13,7 +12,7 @@ const preview: Preview = {
       values: [
         {
           name: "Lumina",
-          value: tokens.color["gray-50"],
+          value: "#f7f7f8",
         },
       ],
     },
