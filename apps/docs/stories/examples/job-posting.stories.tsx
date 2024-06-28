@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import {
-  Badge,
   Button,
   Card,
   Container,
@@ -115,18 +114,6 @@ function JobPostingPage(): JSX.Element {
                       </Heading>
                       <Paragraph variant="caption">{job.location}</Paragraph>
                       <Paragraph>{job.description}</Paragraph>
-                      <Flex
-                        container
-                        gap="space-20"
-                        orientation="horizontal"
-                        wrap
-                      >
-                        {job.skills.map((skill) => (
-                          <Badge key={skill.name} variant="gray">
-                            {skill.name}
-                          </Badge>
-                        ))}
-                      </Flex>
                     </Stack>
 
                     <Flex
